@@ -8,4 +8,4 @@ Publish the repository root from `main` through GitHub Pages. No build step or d
 
 ## Content
 
-Experience is based on the October 22, 2026 high-ticket sales resume. Career totals are self-reported on the Casino Closer profile. The PDF is not linked or bundled.
+Experience is based on the October 22, 2026 high-ticket sales resume. Career totals are self-reported. The PDF is not linked or bundled.
