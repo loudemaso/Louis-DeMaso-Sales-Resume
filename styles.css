@@ -10,3 +10,5 @@
 /* Selling style sits directly under the skills heading. */
 .skills-section .approach-note{display:block;margin:26px 0 0;padding:0;border:0}.skills-section .approach-note>span{display:block;color:var(--blue);font-size:12px;font-weight:700;letter-spacing:1.4px;margin-bottom:10px}.skills-section .approach-note p{font-size:clamp(17px,2vw,23px);font-weight:500;line-height:1.6;color:var(--ink);margin:0;max-width:900px}.skills-section .skill-grid{margin-top:32px}
 @media(max-width:700px){.skills-section .approach-note{margin-top:22px}.skills-section .approach-note p{font-size:17px}.skills-section .skill-grid{margin-top:27px}}
+
+.nav-cta{background:var(--blue);border-color:var(--blue);color:#fff}.nav-cta:hover{background:#0049c5;border-color:#0049c5}.contact-details .text-link{font:inherit;font-weight:600}
