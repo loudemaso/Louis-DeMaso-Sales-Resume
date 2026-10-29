@@ -32,3 +32,11 @@
 .contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}.contact-card{border-radius:24px;overflow:hidden;transition:transform .2s,box-shadow .2s;min-width:0}.contact-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px #142a4a55}.email-card{background:white;color:var(--ink)}.linkedin-card{background:#102c56;color:white}.contact-card-link{display:block;padding:32px}.contact-card-top{display:flex;align-items:center;justify-content:space-between;font-size:25px;margin-bottom:35px}.contact-symbol{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#eaf1ff;color:var(--blue);font-size:28px;font-weight:600}.linkedin-symbol{background:#ffffff1c;color:white;font-size:25px;letter-spacing:-1px}.contact-label{font-size:11px;letter-spacing:1.8px;font-weight:700;opacity:.65}.contact-card h3{font-size:clamp(19px,2.5vw,30px);letter-spacing:-.8px;line-height:1.3;margin-top:12px;overflow-wrap:anywhere}.contact-card p{font-size:14px;opacity:.7;margin:12px 0 0}.email-card button{margin:0 32px 28px;padding:10px 14px;border:0;border-radius:9px;background:#edf3ff;color:var(--blue);font:inherit;font-size:12px;font-weight:600;cursor:pointer}.email-card button:hover{background:#dce9ff}
 @media(max-width:700px){.nav-actions{gap:16px}.contact-nav{font-size:12px}.contact-cards{grid-template-columns:1fr;gap:16px;margin-top:28px}.contact-card-link{padding:26px}.contact-card-top{margin-bottom:26px}.contact-card h3{font-size:24px}.email-card button{margin-left:26px}.contact-card{border-radius:20px}}
 @media(prefers-reduced-motion:reduce){.contact-card:hover{transform:none}}
+
+/* Contact is the final section and visual close of the page. */
+.contact-section{background:linear-gradient(155deg,#edf2fa 0%,#e5ebf5 65%,#dce5f3 100%);border-top:1px solid #d8e0ec;border-radius:36px 36px 0 0;padding:92px 0 112px}
+.contact-section h2{font-size:clamp(40px,4.5vw,60px);letter-spacing:-2.5px}
+.contact-section .contact-cards{margin-top:40px}
+.contact-section .contact-card{box-shadow:0 12px 35px -24px #142a4a55}
+.linkedin-card{display:flex}.linkedin-card .contact-card-link{flex:1}
+@media(max-width:700px){.contact-section{border-radius:24px 24px 0 0;padding:52px 0 64px}.contact-section h2{font-size:39px;letter-spacing:-1.9px}.contact-section .contact-cards{margin-top:28px}}
