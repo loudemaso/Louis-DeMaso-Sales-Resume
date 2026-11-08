@@ -40,3 +40,21 @@
 .contact-section .contact-card{box-shadow:0 12px 35px -24px #142a4a55}
 .linkedin-card{display:flex}.linkedin-card .contact-card-link{flex:1}
 @media(max-width:700px){.contact-section{border-radius:24px 24px 0 0;padding:52px 0 64px}.contact-section h2{font-size:39px;letter-spacing:-1.9px}.contact-section .contact-cards{margin-top:28px}}
+
+/* Call recording below the introduction. */
+.intro-section{padding-bottom:58px}
+.call-section{padding-bottom:90px}
+.call-section .section-top{margin-bottom:28px;align-items:center}
+.call-section h2{font-size:clamp(28px,3vw,38px);letter-spacing:-1.5px}
+.call-duration{font-size:13px;color:var(--muted);white-space:nowrap}
+.call-player{background:#fff;border:1px solid #e2e5ec;border-radius:24px;padding:32px;box-shadow:0 16px 48px -38px #102c5670}
+.call-player audio{display:block;width:100%;height:54px;color-scheme:light}
+.call-speed-row{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:24px;padding-top:24px;border-top:1px solid #e8eaf0}
+#call-speed-label{font-size:13px;font-weight:600;color:#62626a}
+.call-speeds{display:flex;gap:8px;flex-wrap:wrap}
+.call-speeds button{min-width:60px;min-height:44px;padding:10px 14px;border:1px solid #dce1eb;border-radius:50px;background:#f5f7fb;color:#464c59;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s,color .2s}
+.call-speeds button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.call-speeds button:hover{border-color:var(--blue)}
+.call-fallback{font-size:13px;line-height:1.6;color:#62626a;margin:20px 0 0}.call-fallback a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.intro-section{padding-bottom:36px}.call-section{padding-bottom:55px}.call-section .section-top{margin-bottom:22px}.call-section h2{font-size:29px}.call-duration{display:block;margin-top:12px;font-size:12px}.call-player{padding:22px 16px;border-radius:20px}.call-speed-row{display:block;margin-top:20px;padding-top:20px}.call-speeds{margin-top:12px;gap:6px}.call-speeds button{min-width:50px;padding:10px 12px}}
+@media print{.call-section{display:none}}
