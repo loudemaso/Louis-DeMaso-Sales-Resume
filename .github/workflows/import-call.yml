@@ -1,0 +1,26 @@
+name: Import sales call recording
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/import-call.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify the public recording
+        run: |
+          mkdir -p assets
+          curl --fail --location --retry 2 --max-time 180 'https://drive.usercontent.google.com/download?id=189OGc9BZ5ymngZ19iYBDZTnISlOC70Rc&export=download&authuser=0&confirm=t' -o assets/sales-call.mp3
+          echo '665c9e41ba749d6c4ac661d4dcd91799d159b61d32feb9c15d474a1658a82a40  assets/sales-call.mp3' | sha256sum -c -
+      - name: Commit recording
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/sales-call.mp3
+          git diff --cached --quiet && exit 0
+          git commit -m 'Host sales call audio for reliable playback'
+          git push
