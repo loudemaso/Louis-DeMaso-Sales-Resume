@@ -14,7 +14,7 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
 }
 const copyButton = document.querySelector('#copy-email');
 const copyStatus = document.querySelector('#copy-status');
-copyButton.addEventListener('click', async () => {
+if (copyButton) copyButton.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText('loudemaso@gmail.com');
     copyButton.textContent = 'Copied ✓';
@@ -25,25 +25,3 @@ copyButton.addEventListener('click', async () => {
     copyButton.textContent = 'loudemaso@gmail.com';
   }
 });
-
-// Explicit speed controls work consistently across desktop and mobile players.
-const salesCall = document.querySelector('#sales-call');
-if (salesCall) {
-  const speeds = document.querySelectorAll('[data-call-speed]');
-  const callStatus = document.querySelector('#call-status');
-  const fallback = document.querySelector('#call-fallback');
-  speeds.forEach(button => button.addEventListener('click', () => {
-    const speed = Number(button.dataset.callSpeed);
-    salesCall.defaultPlaybackRate = speed;
-    salesCall.playbackRate = speed;
-  }));
-  salesCall.addEventListener('ratechange', () => {
-    speeds.forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.callSpeed) === salesCall.playbackRate)));
-    callStatus.textContent = 'Playback speed: ' + salesCall.playbackRate + ' times.';
-  });
-  salesCall.addEventListener('error', () => {
-    fallback.hidden = false;
-    callStatus.textContent = 'The recording could not be loaded. Use the Google Drive link below.';
-  });
-  salesCall.addEventListener('playing', () => { fallback.hidden = true; });
-}
