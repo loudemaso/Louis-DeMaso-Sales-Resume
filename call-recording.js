@@ -124,7 +124,7 @@
       <div class="call-speed-row"><span id="call-speed-label">Playback speed</span><div class="call-speeds" role="group" aria-labelledby="call-speed-label">${[1, 1.25, 1.5, 2].map(speed => `<button type="button" data-call-speed="${speed}" aria-pressed="${speed === 1}">${speed}×</button>`).join('')}</div></div>
       <p class="sr-only" id="call-status" role="status"></p><p class="call-fallback" id="call-fallback" hidden>Having trouble playing? <a href="https://drive.google.com/file/d/189OGc9BZ5ymngZ19iYBDZTnISlOC70Rc/view" target="_blank" rel="noopener noreferrer">Open the recording in Google Drive ↗</a></p>
     </div>
-    <nav class="call-chapters" aria-label="Recording chapters"><div class="chapters-heading"><h4>Jump to a chapter</h4><p>Select a stage to start listening there.</p></div>${chapterGroup(1, 'Call 1 · Discovery &amp; offer')}${chapterGroup(2, 'Call 2 · Follow-up &amp; close')}</nav>
+    ${host.closest('.call-section') ? '<details><summary style="cursor:pointer;padding:22px 32px;font-size:15px;font-weight:650;border-top:1px solid #e8eaf0;background:#fafbfe">Chapters · 18 sections</summary>' : ''}<nav class="call-chapters" aria-label="Recording chapters"><div class="chapters-heading"><h4>Jump to a chapter</h4><p>Select a stage to start listening there.</p></div>${chapterGroup(1, 'Call 1 · Discovery &amp; offer')}${chapterGroup(2, 'Call 2 · Follow-up &amp; close')}</nav>${host.closest('.call-section') ? '</details>' : ''}
   </article>`;
   const audio = host.querySelector('audio');
   const speeds = host.querySelectorAll('[data-call-speed]');
