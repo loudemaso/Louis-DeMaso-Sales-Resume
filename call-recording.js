@@ -118,9 +118,9 @@
   };
   const chapterGroup = (call, title) => `<div class="chapter-group"><h5>${title}</h5><ol class="chapter-list">${chapters.filter(chapter => chapter.call === call).map(chapter => `<li><button class="chapter-button" type="button" data-chapter="${chapter.start}" aria-label="Jump to ${formatTime(chapter.start)}, ${chapter.title}"><span class="chapter-time">${formatTime(chapter.start)}</span><span class="chapter-copy"><span class="chapter-name">${chapter.title}</span><span class="chapter-detail">${chapter.detail}</span></span></button></li>`).join('')}</ol></div>`;
   host.innerHTML = `<article class="recording-card" aria-labelledby="recording-name">
-    <header class="recording-summary"><p class="eyebrow">REMOTE HIGH-TICKET SALES</p><h3 id="recording-name">Remote High-Ticket $12,000 Home Services Offer — 2-Call Close</h3><p class="recording-meta"><span>Full recording · 1 hr 31 min</span><span>Two calls · One sales process</span></p></header>
+    <header class="recording-summary"><p class="eyebrow">REMOTE HIGH-TICKET SALES</p><h3 id="recording-name">Remote High-Ticket $12,000 Home Services Offer — 2-Call Close with Jimmy</h3><p class="recording-meta"><span>Full recording · 1 hr 31 min</span></p></header>
     <div class="call-player">
-      <audio id="sales-call" aria-label="Remote high-ticket $12,000 home services offer, two-call close" controls preload="metadata" src="assets/sales-call.mp3">Your browser does not support audio playback.</audio>
+      <audio id="sales-call" aria-label="Remote high-ticket $12,000 home services offer, two-call close with Jimmy" controls preload="metadata" src="assets/sales-call.mp3">Your browser does not support audio playback.</audio>
       <div class="call-speed-row"><span id="call-speed-label">Playback speed</span><div class="call-speeds" role="group" aria-labelledby="call-speed-label">${[1, 1.25, 1.5, 2].map(speed => `<button type="button" data-call-speed="${speed}" aria-pressed="${speed === 1}">${speed}×</button>`).join('')}</div></div>
       <p class="sr-only" id="call-status" role="status"></p><p class="call-fallback" id="call-fallback" hidden>Having trouble playing? <a href="https://drive.google.com/file/d/189OGc9BZ5ymngZ19iYBDZTnISlOC70Rc/view" target="_blank" rel="noopener noreferrer">Open the recording in Google Drive ↗</a></p>
     </div>

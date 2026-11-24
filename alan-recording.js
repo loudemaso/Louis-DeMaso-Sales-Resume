@@ -21,9 +21,9 @@
   const formatTime = seconds => Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
 
   host.innerHTML = `<article class="recording-card" aria-labelledby="alan-recording-name">
-    <header class="recording-summary"><p class="eyebrow">SALES CALL · NOVEMBER 4, 2026</p><h3 id="alan-recording-name">Remote High-Ticket $15,745 Home Services Offer — Discovery & Proposal</h3><p class="recording-meta"><span>Full recording · 46 min</span><span>Recorded November 4, 2026</span></p></header>
+    <header class="recording-summary"><p class="eyebrow">SALES CALL · NOVEMBER 4, 2026</p><h3 id="alan-recording-name">Remote High-Ticket $15,745 Home Services Offer — Discovery & Proposal with Alan</h3><p class="recording-subtitle">Prospect closed via text message later that day.</p><p class="recording-meta"><span>Full recording · 46 min</span><span>Recorded November 4, 2026</span></p></header>
     <div class="call-player">
-      <audio aria-label="Alan sales call, November 4, 2026" controls preload="metadata" src="assets/alan-sales-call-2026-11-04.mp3">Your browser does not support audio playback.</audio>
+      <audio aria-label="Remote high-ticket $15,745 home services offer with Alan, November 4, 2026" controls preload="metadata" src="assets/alan-sales-call-2026-11-04.mp3">Your browser does not support audio playback.</audio>
       <div class="call-speed-row"><span id="alan-speed-label">Playback speed</span><div class="call-speeds" role="group" aria-labelledby="alan-speed-label">${[1, 1.25, 1.5, 2].map(speed => `<button type="button" data-call-speed="${speed}" aria-pressed="${speed === 1}">${speed}×</button>`).join('')}</div></div>
       <p class="sr-only" role="status"></p><p class="call-fallback" hidden>Having trouble playing? <a href="assets/alan-sales-call-2026-11-04.mp3" download>Download the recording</a></p>
     </div>
